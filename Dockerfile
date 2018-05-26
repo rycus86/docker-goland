@@ -19,7 +19,7 @@ RUN  \
   libfontconfig1 \
   && rm -rf /var/lib/apt/lists/*
 
-ARG goland_source=https://download-cf.jetbrains.com/go/goland-2018.1.3.tar.gz
+ARG goland_source=https://download-cf.jetbrains.com/go/goland-2018.1.4.tar.gz
 ARG goland_local_dir=.GoLand2018.1
 
 RUN mkdir /opt/goland
@@ -39,7 +39,7 @@ ENV HOME /home/developer
 
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin
 
-RUN mkdir /home/developer/.Idea \
-  && ln -sf /home/developer/.Idea /home/developer/$goland_local_dir
+RUN mkdir /home/developer/.GoLand \
+  && ln -sf /home/developer/.GoLand /home/developer/$goland_local_dir
 
 CMD [ "/opt/goland/bin/goland.sh" ]
