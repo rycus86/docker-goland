@@ -6,7 +6,7 @@ Docker container to run JetBrains GoLand (https://www.jetbrains.com/go/)
 docker run --rm \
   -e DISPLAY=${DISPLAY} \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
-  -v ~/.GoLand:/home/developer/.GoLand2018.1 \
+  -v ~/.GoLand:/home/developer/.GoLand \
   -v ~/.GoLand.java:/home/developer/.java \
   -v ~/Project/go:/home/developer/go \
   --security-opt=seccomp:unconfined \
