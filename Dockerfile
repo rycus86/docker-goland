@@ -2,7 +2,7 @@ FROM debian
 
 LABEL maintainer "Viktor Adam <rycus86@gmail.com>"
 
-ARG go_source=https://dl.google.com/go/go1.10.2.linux-amd64.tar.gz
+ARG go_source=https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
 
 ADD $go_source /tmp/golang.tar.gz
 RUN tar -C /usr/local -xzf /tmp/golang.tar.gz && rm /tmp/golang.tar.gz
