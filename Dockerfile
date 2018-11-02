@@ -19,7 +19,7 @@ RUN  \
   libfontconfig1 \
   && rm -rf /var/lib/apt/lists/*
 
-ARG goland_source=https://download.jetbrains.com/go/goland-183.3975.25.tar.gz
+ARG goland_source=https://download.jetbrains.com/go/goland-183.4139.33.tar.gz
 ARG goland_local_dir=.GoLand2018.3
 
 RUN mkdir /opt/goland
