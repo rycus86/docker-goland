@@ -2,7 +2,7 @@ FROM debian
 
 LABEL maintainer "Viktor Adam <rycus86@gmail.com>"
 
-ARG go_source=https://dl.google.com/go/go1.11.1.linux-amd64.tar.gz
+ARG go_source=https://dl.google.com/go/go1.11.2.linux-amd64.tar.gz
 
 ADD $go_source /tmp/golang.tar.gz
 RUN tar -C /usr/local -xzf /tmp/golang.tar.gz && rm /tmp/golang.tar.gz
@@ -19,7 +19,7 @@ RUN  \
   libfontconfig1 \
   && rm -rf /var/lib/apt/lists/*
 
-ARG goland_source=https://download.jetbrains.com/go/goland-183.4284.47.tar.gz
+ARG goland_source=https://download.jetbrains.com/go/goland-183.4284.84.tar.gz
 ARG goland_local_dir=.GoLand2018.3
 
 RUN mkdir /opt/goland
