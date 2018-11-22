@@ -2,7 +2,7 @@ FROM debian
 
 LABEL maintainer "Viktor Adam <rycus86@gmail.com>"
 
-ARG go_source=https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
+ARG go_source=https://dl.google.com/go/go1.11.2.linux-amd64.tar.gz
 
 ADD $go_source /tmp/golang.tar.gz
 RUN tar -C /usr/local -xzf /tmp/golang.tar.gz && rm /tmp/golang.tar.gz
@@ -19,8 +19,8 @@ RUN  \
   libfontconfig1 \
   && rm -rf /var/lib/apt/lists/*
 
-ARG goland_source=https://download.jetbrains.com/go/goland-2018.2.3.tar.gz
-ARG goland_local_dir=.GoLand2018.2
+ARG goland_source=https://download.jetbrains.com/go/goland-2018.3.tar.gz
+ARG goland_local_dir=.GoLand2018.3
 
 RUN mkdir /opt/goland
 WORKDIR /opt/goland
@@ -32,7 +32,7 @@ ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local
 RUN tar --strip-components=1 -xzf installer.tgz && rm installer.tgz
 RUN curl -fsSL https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
-RUN useradd -ms /bin/bash developer
+RUN useradd -ms /bin/bash developer && chown -R developer /usr/local/go
 USER developer
 
 ENV HOME /home/developer
