@@ -21,7 +21,7 @@ RUN  \
   && useradd -ms /bin/bash developer \
   && chown -R developer /usr/local/go
 
-ARG goland_source=https://download.jetbrains.com/go/goland-2018.3.tar.gz
+ARG goland_source=https://download.jetbrains.com/go/goland-2018.3.1.tar.gz
 ARG goland_local_dir=.GoLand2018.3
 
 WORKDIR /opt/goland
