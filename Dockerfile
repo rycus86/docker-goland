@@ -6,7 +6,7 @@ ENV GOBIN=/usr/local/go/bin
 ENV GOROOT=/usr/local/go
 ENV GOPATH=/root/go
 
-ARG go_source=https://dl.google.com/go/go1.12.linux-amd64.tar.gz
+ARG go_source=https://dl.google.com/go/go1.12.1.linux-amd64.tar.gz
 
 RUN  \
   apt-get update && apt-get install --no-install-recommends -y \
