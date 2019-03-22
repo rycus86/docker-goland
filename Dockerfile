@@ -11,9 +11,9 @@ ARG go_source=https://dl.google.com/go/go1.12.1.linux-amd64.tar.gz
 RUN  \
   apt-get update && apt-get install --no-install-recommends -y \
   curl ca-certificates \
-  gcc git openssh-client \
+  gcc git openssh-client less \
   libxtst-dev libxext-dev libxrender-dev libfreetype6-dev \
-  libfontconfig1 \
+  libfontconfig1 libgtk2.0-0 libxslt1.1 libxxf86vm1 \
   && rm -rf /var/lib/apt/lists/* \
   && curl -fsSL $go_source -o /tmp/golang.tar.gz \
   && tar -C /usr/local -xzf /tmp/golang.tar.gz \
@@ -21,7 +21,7 @@ RUN  \
   && useradd -ms /bin/bash developer \
   && chown -R developer /usr/local/go
 
-ARG goland_source=https://download.jetbrains.com/go/goland-191.6183.21.tar.gz
+ARG goland_source=https://download.jetbrains.com/go/goland-191.6183.59.tar.gz
 ARG goland_local_dir=.GoLand2019.1
 
 WORKDIR /opt/goland
