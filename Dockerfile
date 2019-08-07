@@ -6,7 +6,7 @@ ENV GOBIN=/usr/local/go/bin
 ENV GOROOT=/usr/local/go
 ENV GOPATH=/root/go
 
-ARG go_source=https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz
+ARG go_source=https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz
 
 RUN  \
   apt-get update && apt-get install --no-install-recommends -y \
@@ -21,7 +21,7 @@ RUN  \
   && useradd -ms /bin/bash developer \
   && chown -R developer /usr/local/go
 
-ARG goland_source=https://download.jetbrains.com/go/goland-2019.1.3.tar.gz
+ARG goland_source=https://download.jetbrains.com/go/goland-2019.1.4.tar.gz
 ARG goland_local_dir=.GoLand2019.1
 
 WORKDIR /opt/goland
