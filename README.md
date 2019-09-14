@@ -20,7 +20,7 @@ Docker Hub Page: https://hub.docker.com/r/rycus86/goland/
 
 ### Notes
 
-The IDE will have Go and dep installed.
+The IDE will have a recent Go version installed.
 Project folders need to be mounted like `-v ~/Project/go:/home/developer/go` (`GOPATH` will point to this).
 The actual name can be anything - I used something random to be able to start multiple instances if needed.
 You might want to consider using `--network=host` if you're running servers from the IDE.
