@@ -6,9 +6,9 @@ ENV GOBIN=/usr/local/go/bin
 ENV GOROOT=/usr/local/go
 ENV GOPATH=/root/go
 
-ARG GO_VERSION=1.13.1
-ARG GOLAND_VERSION=2019.2
-ARG GOLAND_BUILD=2019.2.3
+ARG GO_VERSION=1.16.4
+ARG GOLAND_VERSION=2021.2
+ARG GOLAND_BUILD=212.3116.33
 
 ARG go_source=https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz
 
